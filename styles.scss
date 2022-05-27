@@ -1,3 +1,13 @@
 body {
   background-image: url(./images/FlyingNikka_fTaccola©DJI_0092-630x472.jpeg);
 }
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  margin: 0;
+  width: 100%;
+  background-color: red;
+}
