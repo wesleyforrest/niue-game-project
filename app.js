@@ -11,7 +11,8 @@ const questions = [
   {
     number: 1,
     text: "Which team won the 2021 America's Cup?",
-    image: "",
+    imgUrl:
+      "https://i.guim.co.uk/img/media/3a3cfecfe9369abfdc4ea5e01ec15ae9d34880d6/0_0_4369_2622/master/4369.jpg?width=620&quality=85&auto=format&fit=max&s=9b1726f6d6a5f44068c63d27ab47c71b",
     answer: "New Zealand",
   },
 
