@@ -1,6 +1,13 @@
-// body {
-//   background-image: url(./images/Auckland-background.webp);
-// }
+body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.question-card {
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar-container {
   display: flex;
@@ -22,14 +29,13 @@
   margin: 30px;
   border: solid 1px limegreen;
   padding: 10px;
+  min-height: 100vh;
 }
 
 .image-container {
-  margin: auto;
-  height: 400px;
-  width: 700px;
-  border: solid 2px orange;
-  background-image: url(./images/FlyingNikka.jpeg);
+  width: 100%;
+
+  border: 1px solid grey;
 }
 
 .answer-container {

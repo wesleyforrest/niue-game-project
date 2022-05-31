@@ -1,8 +1,9 @@
-import questionsArr from "./data/questions";
+import questionsArr from "./data/questions.js";
 
 const questionNumber = document.querySelector(".question-number");
 const question = document.querySelector(".question");
 const imageCard = document.querySelector(".image-container__card");
+const questionCard = document.querySelector(".question-card");
 
 const answerA = document.querySelector("#answer-a");
 const answerB = document.querySelector("#answer-b");
@@ -10,16 +11,24 @@ const answerC = document.querySelector("#answer-c");
 const answerD = document.querySelector("#answer-d");
 
 const quizCards = (array) => {
-  const quizHTML = array.map((questionsArr) => {
-    return ` <h3 class="question-number">Question - ${}</h3>
-        <p class="question">What is this?</p>
+  const quizHTML = array
+    .map((questionsArr) => {
+      return `  
+        <h3 class="question-number">Question - ${questionsArr.number}</h3>
+        <p class="question">${questionsArr.text}</p>
         <div class="image-container">
-          <div class="image-container__card" id="question-image-1"></div>
-          <!-- <div class="image-container=__card" id="question-image-2"></div>></div>
-          <div class="image-container=__card" id="question-image-3"></div>></div>
-          <div class="image-container=__card" id="question-image-4"></div>></div> -->
-        </div>`;
-  });
-};
+        <img src="${questionsArr.imgUrl}" alt="">
+        </div>
+        <section class="answer-container">
+      <button class="answer-container__button" id="answer-a">Answer A</button>
+      <button class="answer-container__button" id="answer-b">Answer B</button>
+      <button class="answer-container__button" id="answer-c">Answer C</button>
+      <button class="answer-container__button" id="answer-d">Answer D</button>
+    </section>`;
+    })
+    .join("");
 
-console.log(questionsArr)
+  questionCard.innerHTML = quizHTML;
+};
+quizCards(questionsArr);
+console.log(questionsArr[0].number);
