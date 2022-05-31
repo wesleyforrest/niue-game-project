@@ -32,9 +32,13 @@ body {
   min-height: 100vh;
 }
 
-.image-container {
-  width: 100%;
+imgUrl {
+  width: 50%;
+}
 
+.image-container {
+  width: 70%;
+  height: auto;
   border: 1px solid grey;
 }
 
@@ -50,4 +54,9 @@ body {
     width: 100px;
     height: 70px;
   }
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

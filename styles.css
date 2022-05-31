@@ -32,8 +32,13 @@ body {
   min-height: 100vh;
 }
 
+imgUrl {
+  width: 50%;
+}
+
 .image-container {
-  width: 100%;
+  width: 70%;
+  height: auto;
   border: 1px solid grey;
 }
 
@@ -48,4 +53,9 @@ body {
 .answer-container__button {
   width: 100px;
   height: 70px;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */
