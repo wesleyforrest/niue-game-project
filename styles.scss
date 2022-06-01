@@ -1,3 +1,6 @@
+$button-correct: #61d636;
+$button-wrong: #d60200;
+
 body {
   display: flex;
   flex-direction: column;
@@ -32,10 +35,6 @@ body {
   min-height: 100vh;
 }
 
-imgUrl {
-  width: 50%;
-}
-
 .image-container {
   width: 70%;
   height: auto;
@@ -56,6 +55,9 @@ imgUrl {
   }
 }
 
+button:hover {
+  background-color: goldenrod;
+}
 img {
   width: 100%;
   height: auto;

@@ -9,6 +9,21 @@ const answerA = document.querySelector("#answer-a");
 const answerB = document.querySelector("#answer-b");
 const answerC = document.querySelector("#answer-c");
 const answerD = document.querySelector("#answer-d");
+const answerButtons = [];
+
+const getButtonId = (event) => {
+  if (event.target.id === "true") {
+    event.target.style.backgroundColor = "#61d636";
+  } else {
+    event.target.style.backgroundColor = "#d60200";
+  }
+  console.log(event.target.id);
+};
+
+const getButtons = () => {
+  const buttons = document.querySelectorAll(".answer-container__button");
+  buttons.forEach((button) => button.addEventListener("click", getButtonId));
+};
 
 const quizCards = (array) => {
   const quizHTML = array
@@ -20,15 +35,16 @@ const quizCards = (array) => {
         <img src="${questionsArr.imgUrl}" alt="">
         </div>
         <section class="answer-container">
-      <button class="answer-container__button" id="answer-a">${questionsArr.answerA}</button>
-      <button class="answer-container__button" id="answer-b">${questionsArr.answerB}</button>
-      <button class="answer-container__button" id="answer-c">${questionsArr.answerC}</button>
-      <button class="answer-container__button" id="answer-d">${questionsArr.answerD}</button>
+      <button class="answer-container__button" id=${questionsArr.answerA[1]}>${questionsArr.answerA[0]}</button>
+      <button class="answer-container__button" id=${questionsArr.answerB[1]}>${questionsArr.answerB[0]}</button>
+      <button class="answer-container__button" id=${questionsArr.answerC[1]}>${questionsArr.answerC[0]}</button>
+      <button class="answer-container__button" id=${questionsArr.answerD[1]}>${questionsArr.answerD[0]}</button>
     </section>`;
     })
     .join("");
 
   questionCard.innerHTML = quizHTML;
+  getButtons();
 };
+
 quizCards(questionsArr);
-console.log(questionsArr[0].number);
