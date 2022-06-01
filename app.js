@@ -20,10 +20,10 @@ const quizCards = (array) => {
         <img src="${questionsArr.imgUrl}" alt="">
         </div>
         <section class="answer-container">
-      <button class="answer-container__button" id="answer-a">Answer A</button>
-      <button class="answer-container__button" id="answer-b">Answer B</button>
-      <button class="answer-container__button" id="answer-c">Answer C</button>
-      <button class="answer-container__button" id="answer-d">Answer D</button>
+      <button class="answer-container__button" id="answer-a">${questionsArr.answerA}</button>
+      <button class="answer-container__button" id="answer-b">${questionsArr.answerB}</button>
+      <button class="answer-container__button" id="answer-c">${questionsArr.answerC}</button>
+      <button class="answer-container__button" id="answer-d">${questionsArr.answerD}</button>
     </section>`;
     })
     .join("");
