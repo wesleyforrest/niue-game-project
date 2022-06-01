@@ -4,6 +4,10 @@ body {
   height: auto;
 }
 
+.title {
+  margin-top: 100px;
+}
+
 .question-card {
   display: flex;
   flex-direction: column;
@@ -17,6 +21,9 @@ body {
   margin: 0;
   width: 100%;
   background-color: red;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
 .nav-button {
