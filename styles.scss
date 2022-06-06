@@ -1,3 +1,8 @@
+@use "./questions";
+@use "./answers";
+@use "./buttons";
+@use "./variables";
+
 $button-correct: #61d636;
 $button-wrong: #d60200;
 
