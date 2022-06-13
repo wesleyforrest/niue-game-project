@@ -48,3 +48,18 @@ const quizCards = (array) => {
 };
 
 quizCards(questionsArr);
+
+const timerClock = document.querySelector("#timer");
+let timeSecond = 60;
+
+timerClock.innerHTML = timeSecond;
+
+let countDown = setInterval(() => {
+  timeSecond--;
+  timerClock.innerHTML = timeSecond;
+  if (timeSecond <= 0) {
+    clearInterval(countDown);
+
+    gameMessageContainer.innerHTML = `<p>Game Over</p>`;
+  }
+}, 1000);
